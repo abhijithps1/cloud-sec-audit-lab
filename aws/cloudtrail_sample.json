@@ -1,0 +1,30 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "userName": "abhijith-test"
+      },
+      "eventTime": "2025-06-14T09:45:22Z",
+      "eventName": "ConsoleLogin",
+      "sourceIPAddress": "45.16.192.121",
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "userName": "suspicious-user"
+      },
+      "eventTime": "2025-06-14T10:02:55Z",
+      "eventName": "ConsoleLogin",
+      "sourceIPAddress": "5.188.62.176",
+      "responseElements": {
+        "ConsoleLogin": "Failure"
+      }
+    }
+  ]
+}
