@@ -1,0 +1,65 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "userName": "johndoe",
+        "arn": "arn:aws:iam::123456789012:user/johndoe"
+      },
+      "eventTime": "2025-06-12T14:22:01Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "signin.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "MFAUsed": "Yes"
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "arn": "arn:aws:sts::123456789012:assumed-role/Admin/johndoe"
+      },
+      "eventTime": "2025-06-12T14:45:34Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.5",
+      "userAgent": "aws-cli/2.4.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/Admin",
+        "roleSessionName": "johndoe"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIA...",
+          "expiration": "2025-06-12T15:45:34Z"
+        }
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "userName": "malicious_user",
+        "arn": "arn:aws:iam::123456789012:user/malicious_user"
+      },
+      "eventTime": "2025-06-12T15:00:01Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-west-2",
+      "sourceIPAddress": "144.202.14.12",
+      "userAgent": "signin.amazonaws.com",
+      "requestParameters": null,
+      "errorCode": "FailedAuthentication",
+      "responseElements": null
+    }
+  ]
+}
