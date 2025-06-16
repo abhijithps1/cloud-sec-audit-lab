@@ -1,0 +1,10 @@
+Sample findings from running [kubeaudit](https://github.com/Shopify/kubeaudit):
+
+```txt
+[ERROR] Privileged container - default/myapp
+Reason: Container is running in privileged mode
+Recommendation: Set privileged to false
+
+[WARNING] AutomountServiceAccountToken - kube-system/coredns
+Reason: Automounting service account token
+Recommendation: Set automountServiceAccountToken to false
