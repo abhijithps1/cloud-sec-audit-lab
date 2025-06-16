@@ -1,0 +1,17 @@
+📁 1. falco.log Sample + Explanation
+Falco runs as a daemonset in your cluster and logs runtime events. Here’s a simulated falco.log entry that you can include in your repo as kubernetes/falco.log.
+
+11:02:34.123456789: Notice A shell was spawned in a container with an attached terminal (user=root command=bash container_id=8f9a2e4aee1a image=nginx pod=nginx-app namespace=default)
+
+📌 Explanation of Key Fields:
+
+| Field               | Value                              | Description                                             |
+| ------------------- | ---------------------------------- | ------------------------------------------------------- |
+| `Notice`            | Alert severity                     | Level (Notice, Warning, Critical, etc.)                 |
+| `shell`             | Event category                     | Runtime action detected (shell opened inside container) |
+| `user=root`         | Username                           | The user that spawned the shell                         |
+| `command=bash`      | Detected process                   | The exact command executed                              |
+| `container_id`      | `8f9a2e4aee1a`                     | The container where it occurred                         |
+| `image=nginx`       | Docker/K8s image used              |                                                         |
+| `pod=nginx-app`     | Affected pod name                  |                                                         |
+| `namespace=default` | Namespace where the pod is running |                                                         |
